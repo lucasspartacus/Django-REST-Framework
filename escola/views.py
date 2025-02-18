@@ -2,6 +2,7 @@ from escola.models import Estudante, Curso, Matricula
 from escola.serializers import EstudanteSerializer, CursoSerializer, MatriculaSerializer, ListaMatriculaCursoSerializer, ListaMatriculaEstudanteSerializer
 from rest_framework import viewsets, generics
 
+#permission_classes = [IsAdminUser] Somente admin pode ver essa pagina
 class EstudanteViewSet(viewsets.ModelViewSet):
     queryset = Estudante.objects.all()
     serializer_class = EstudanteSerializer
